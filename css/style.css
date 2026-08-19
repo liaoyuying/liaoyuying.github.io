@@ -819,3 +819,25 @@ img {
     }
 
 }
+/* =========================================
+   Works - Artwork Link
+   ========================================= */
+
+.work-link {
+    display: block;
+    overflow: hidden;
+}
+
+.work-link img {
+    display: block;
+    width: 100%;
+
+    transition:
+        transform 0.5s ease,
+        opacity 0.5s ease;
+}
+
+.work-link:hover img {
+    transform: scale(1.03);
+    opacity: 0.92;
+}
