@@ -1,0 +1,821 @@
+/* ==================================================
+   LIAO YU-YING
+   ARTIST WEBSITE
+   MAIN STYLESHEET
+================================================== */
+
+
+/* ==================================================
+   VARIABLES
+================================================== */
+
+:root {
+
+    --background: #f7f7f4;
+
+    --text: #111111;
+
+    --muted: #777777;
+
+    --line: #deded9;
+
+    --header-height: 72px;
+
+    --page-padding: 36px;
+
+    --transition-fast: 0.25s ease;
+
+    --transition-medium: 0.6s ease;
+
+}
+
+
+/* ==================================================
+   RESET
+================================================== */
+
+* {
+
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+
+}
+
+
+html {
+
+    scroll-behavior: smooth;
+
+}
+
+
+body {
+
+    background: var(--background);
+
+    color: var(--text);
+
+    font-family:
+        "Helvetica Neue",
+        Helvetica,
+        Arial,
+        "Noto Sans TC",
+        sans-serif;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+
+    -webkit-font-smoothing: antialiased;
+
+    opacity: 0;
+
+    transition:
+        opacity 0.6s ease;
+
+}
+
+
+body.page-loaded {
+
+    opacity: 1;
+
+}
+
+
+body.page-exit {
+
+    opacity: 0;
+
+}
+
+
+/* ==================================================
+   LINKS
+================================================== */
+
+a {
+
+    color: inherit;
+
+    text-decoration: none;
+
+}
+
+
+/* ==================================================
+   IMAGES
+================================================== */
+
+img {
+
+    display: block;
+
+    width: 100%;
+
+}
+
+
+/* ==================================================
+   HEADER
+================================================== */
+
+.site-header {
+
+    position: fixed;
+
+    top: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    height: var(--header-height);
+
+    padding:
+        0
+        var(--page-padding);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    z-index: 100;
+
+    pointer-events: none;
+
+}
+
+
+.site-logo {
+
+    pointer-events: auto;
+
+    font-size: 12px;
+
+    font-weight: 500;
+
+    letter-spacing: 0.16em;
+
+}
+
+
+.main-navigation {
+
+    display: flex;
+
+    gap: 30px;
+
+    pointer-events: auto;
+
+}
+
+
+.main-navigation a {
+
+    font-size: 11px;
+
+    letter-spacing: 0.06em;
+
+    position: relative;
+
+}
+
+
+.main-navigation a::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+
+    bottom: -5px;
+
+    width: 0;
+
+    height: 1px;
+
+    background: currentColor;
+
+    transition:
+        width
+        var(--transition-fast);
+
+}
+
+
+.main-navigation a:hover::after {
+
+    width: 100%;
+
+}
+
+
+/* ==================================================
+   MOBILE MENU BUTTON
+================================================== */
+
+.menu-button {
+
+    display: none;
+
+    border: none;
+
+    background: transparent;
+
+    cursor: pointer;
+
+    width: 34px;
+
+    height: 34px;
+
+    pointer-events: auto;
+
+}
+
+
+.menu-button span {
+
+    display: block;
+
+    width: 18px;
+
+    height: 1px;
+
+    background: var(--text);
+
+    margin: 5px auto;
+
+}
+
+
+/* ==================================================
+   HERO
+================================================== */
+
+.hero {
+
+    position: relative;
+
+    width: 100%;
+
+    height: 100vh;
+
+    min-height: 680px;
+
+    overflow: hidden;
+
+}
+
+
+.hero-image {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    object-position: center;
+
+}
+
+
+.hero-overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    display: flex;
+
+    align-items: flex-end;
+
+    justify-content: space-between;
+
+    padding:
+        40px
+        var(--page-padding);
+
+    color: white;
+
+    background:
+        linear-gradient(
+            to top,
+            rgba(0,0,0,0.28),
+            transparent 30%
+        );
+
+}
+
+
+.hero-title h1 {
+
+    font-size: clamp(
+        25px,
+        3vw,
+        42px
+    );
+
+    font-weight: 400;
+
+    letter-spacing: 0.1em;
+
+}
+
+
+.hero-title p {
+
+    margin-top: 3px;
+
+    font-size: 11px;
+
+    letter-spacing: 0.12em;
+
+}
+
+
+.hero-location p {
+
+    font-size: 10px;
+
+    letter-spacing: 0.08em;
+
+}
+
+
+/* ==================================================
+   INTRO
+================================================== */
+
+.intro {
+
+    display: grid;
+
+    grid-template-columns:
+        1fr
+        2fr;
+
+    gap: 60px;
+
+    padding:
+        150px
+        var(--page-padding);
+
+    border-bottom:
+        1px solid
+        var(--line);
+
+}
+
+
+.intro-label {
+
+    font-size: 10px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.15em;
+
+    color: var(--muted);
+
+}
+
+
+.intro-text {
+
+    max-width: 720px;
+
+}
+
+
+.intro-text p {
+
+    font-family:
+        "Noto Serif TC",
+        "Songti TC",
+        serif;
+
+    font-size:
+        clamp(
+            20px,
+            2.2vw,
+            29px
+        );
+
+    line-height: 1.85;
+
+}
+
+
+.intro-text p + p {
+
+    margin-top: 8px;
+
+}
+
+
+.text-link {
+
+    display: inline-block;
+
+    margin-top: 42px;
+
+    font-size: 11px;
+
+    border-bottom:
+        1px solid
+        var(--text);
+
+    padding-bottom: 4px;
+
+}
+
+
+/* ==================================================
+   SELECTED WORKS
+================================================== */
+
+.selected-works {
+
+    padding:
+        130px
+        var(--page-padding);
+
+}
+
+
+.section-heading {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: baseline;
+
+    margin-bottom: 65px;
+
+}
+
+
+.section-heading span {
+
+    font-size: 10px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.15em;
+
+}
+
+
+.section-heading a {
+
+    font-size: 10px;
+
+    color: var(--muted);
+
+}
+
+
+/* ==================================================
+   WORK GRID
+================================================== */
+
+.work-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    column-gap: 24px;
+
+    row-gap: 70px;
+
+}
+
+
+.work-card {
+
+    display: block;
+
+}
+
+
+.work-image-wrapper {
+
+    overflow: hidden;
+
+    background: #e7e7e3;
+
+    aspect-ratio: 4 / 5;
+
+}
+
+
+.work-image-wrapper img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    transition:
+        transform
+        0.7s
+        cubic-bezier(
+            0.22,
+            1,
+            0.36,
+            1
+        );
+
+}
+
+
+/* ==============================================
+   3% HOVER
+================================================ */
+
+.work-card:hover
+.work-image-wrapper img {
+
+    transform: scale(1.03);
+
+}
+
+
+.work-information {
+
+    padding-top: 16px;
+
+}
+
+
+.work-information h2 {
+
+    font-family:
+        "Noto Serif TC",
+        "Songti TC",
+        serif;
+
+    font-size: 15px;
+
+    font-weight: 400;
+
+}
+
+
+.work-information p {
+
+    margin-top: 2px;
+
+    font-size: 10px;
+
+    color: var(--muted);
+
+}
+
+
+.work-information span {
+
+    display: block;
+
+    margin-top: 7px;
+
+    font-size: 10px;
+
+    color: var(--muted);
+
+}
+
+
+/* ==================================================
+   FOOTER
+================================================== */
+
+.site-footer {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    padding:
+        45px
+        var(--page-padding);
+
+    border-top:
+        1px solid
+        var(--line);
+
+    font-size: 10px;
+
+    color: var(--muted);
+
+}
+
+
+.footer-links {
+
+    display: flex;
+
+    gap: 22px;
+
+}
+
+
+/* ==================================================
+   RESPONSIVE
+================================================== */
+
+@media (max-width: 800px) {
+
+
+    :root {
+
+        --page-padding: 20px;
+
+        --header-height: 62px;
+
+    }
+
+
+    .main-navigation {
+
+        display: none;
+
+        position: absolute;
+
+        top: 62px;
+
+        left: 0;
+
+        width: 100%;
+
+        padding: 28px 20px;
+
+        background:
+            var(--background);
+
+        flex-direction: column;
+
+        gap: 18px;
+
+        border-bottom:
+            1px solid
+            var(--line);
+
+    }
+
+
+    .main-navigation.is-open {
+
+        display: flex;
+
+    }
+
+
+    .menu-button {
+
+        display: block;
+
+    }
+
+
+    .hero {
+
+        min-height: 600px;
+
+    }
+
+
+    .hero-overlay {
+
+        padding:
+            30px
+            var(--page-padding);
+
+    }
+
+
+    .hero-title h1 {
+
+        font-size: 24px;
+
+    }
+
+
+    .intro {
+
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+
+        padding:
+            100px
+            var(--page-padding);
+
+    }
+
+
+    .selected-works {
+
+        padding:
+            90px
+            var(--page-padding);
+
+    }
+
+
+    .work-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        column-gap: 15px;
+
+        row-gap: 55px;
+
+    }
+
+}
+
+
+@media (max-width: 520px) {
+
+
+    .hero {
+
+        min-height: 560px;
+
+    }
+
+
+    .hero-location {
+
+        display: none;
+
+    }
+
+
+    .work-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .section-heading {
+
+        margin-bottom: 45px;
+
+    }
+
+
+    .site-footer {
+
+        flex-direction: column;
+
+        gap: 12px;
+
+    }
+
+}
+
+
+/* ==================================================
+   DARK MODE
+   FOLLOWS SYSTEM SETTINGS
+================================================== */
+
+@media (prefers-color-scheme: dark) {
+
+
+    :root {
+
+        --background: #111111;
+
+        --text: #eeeeeb;
+
+        --muted: #999999;
+
+        --line: #333333;
+
+    }
+
+
+    .work-image-wrapper {
+
+        background: #222222;
+
+    }
+
+}
