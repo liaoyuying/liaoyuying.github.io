@@ -841,3 +841,702 @@ img {
     transform: scale(1.03);
     opacity: 0.92;
 }
+/* =========================================
+   ABOUT / EXHIBITIONS
+   ========================================= */
+
+
+/* -----------------------------------------
+   General Page Layout
+   ----------------------------------------- */
+
+.page-content {
+    width: min(1200px, calc(100% - 80px));
+    margin: 0 auto;
+    padding: 150px 0 120px;
+}
+
+.page-intro {
+    margin-bottom: 110px;
+}
+
+.page-intro h1 {
+    margin: 0;
+    font-size: 32px;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+}
+
+
+/* -----------------------------------------
+   About
+   ----------------------------------------- */
+
+.about-section {
+    margin-bottom: 110px;
+}
+
+.about-section h2 {
+    margin: 0 0 45px;
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 0.03em;
+}
+
+.about-name {
+    margin: -30px 0 35px;
+    font-size: 14px;
+    color: #777;
+}
+
+.about-text {
+    max-width: 700px;
+    font-size: 15px;
+    line-height: 2;
+    letter-spacing: 0.03em;
+}
+
+.about-text p {
+    margin: 0 0 20px;
+}
+
+
+/* -----------------------------------------
+   CV
+   ----------------------------------------- */
+
+.cv-list {
+    max-width: 900px;
+}
+
+.cv-item {
+    display: grid;
+    grid-template-columns: 130px 1fr;
+    column-gap: 40px;
+
+    margin-bottom: 28px;
+
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+.cv-item p {
+    margin: 0;
+}
+
+.cv-year {
+    color: #777;
+    white-space: nowrap;
+}
+
+.cv-year-group {
+    margin-bottom: 65px;
+}
+
+.cv-year-group > h3 {
+    margin: 0 0 30px;
+
+    font-size: 15px;
+    font-weight: 400;
+}
+
+
+/* -----------------------------------------
+   Language Switch
+   ----------------------------------------- */
+
+.about-language {
+    margin-top: 120px;
+
+    font-size: 13px;
+    letter-spacing: 0.04em;
+}
+
+.about-language a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.about-language a:hover {
+    opacity: 0.55;
+}
+
+.about-language span {
+    margin: 0 8px;
+    color: #999;
+}
+
+
+/* -----------------------------------------
+   Exhibitions
+   ----------------------------------------- */
+
+.exhibition-entry {
+    margin-bottom: 150px;
+}
+
+.exhibition-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    margin-bottom: 55px;
+}
+
+.exhibition-header h2 {
+    margin: 8px 0 12px;
+
+    font-size: 25px;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+}
+
+.exhibition-year {
+    margin: 0;
+
+    font-size: 13px;
+    color: #777;
+    letter-spacing: 0.08em;
+}
+
+.exhibition-type {
+    margin: 0;
+
+    font-size: 13px;
+    color: #777;
+}
+
+.exhibition-location {
+    min-width: 180px;
+
+    font-size: 13px;
+    line-height: 1.8;
+    color: #777;
+
+    text-align: right;
+}
+
+.exhibition-location p {
+    margin: 0;
+}
+
+
+/* -----------------------------------------
+   Exhibition Gallery
+   ----------------------------------------- */
+
+.exhibition-gallery {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 20px;
+}
+
+.exhibition-gallery img {
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    transition:
+        transform 0.5s ease,
+        opacity 0.5s ease;
+}
+
+.exhibition-gallery img:hover {
+    transform: scale(1.015);
+    opacity: 0.92;
+}
+
+
+/* -----------------------------------------
+   Mobile
+   ----------------------------------------- */
+
+@media (max-width: 768px) {
+
+
+    .page-content {
+        width: calc(100% - 40px);
+        padding: 110px 0 80px;
+    }
+
+
+    .page-intro {
+        margin-bottom: 75px;
+    }
+
+
+    .page-intro h1 {
+        font-size: 27px;
+    }
+
+
+    .about-section {
+        margin-bottom: 75px;
+    }
+
+
+    .about-section h2 {
+        margin-bottom: 30px;
+        font-size: 17px;
+    }
+
+
+    .about-text {
+        font-size: 14px;
+        line-height: 1.9;
+    }
+
+
+    .cv-item {
+        grid-template-columns: 85px 1fr;
+
+        column-gap: 20px;
+
+        margin-bottom: 22px;
+
+        font-size: 13px;
+        line-height: 1.8;
+    }
+
+
+    .cv-year-group {
+        margin-bottom: 50px;
+    }
+
+
+    /* Exhibitions */
+
+    .exhibition-entry {
+        margin-bottom: 90px;
+    }
+
+
+    .exhibition-header {
+        display: block;
+
+        margin-bottom: 30px;
+    }
+
+
+    .exhibition-header h2 {
+        font-size: 21px;
+    }
+
+
+    .exhibition-location {
+        margin-top: 20px;
+
+        text-align: left;
+    }
+
+
+    .exhibition-gallery {
+        grid-template-columns: 1fr;
+
+        gap: 12px;
+    }
+
+
+}
+/* =========================================
+   WORKS
+   ========================================= */
+
+
+/* -----------------------------------------
+   Year Selection
+   ----------------------------------------- */
+
+.works-years {
+    max-width: 850px;
+}
+
+
+.works-year {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 28px 0;
+
+    border-bottom: 1px solid #ddd;
+
+    color: inherit;
+    text-decoration: none;
+
+    font-size: 18px;
+
+    transition:
+        opacity 0.3s ease,
+        padding-left 0.3s ease;
+}
+
+
+.works-year:first-child {
+    border-top: 1px solid #ddd;
+}
+
+
+.works-year:hover {
+    opacity: 0.55;
+    padding-left: 8px;
+}
+
+
+.works-arrow {
+    font-size: 15px;
+    color: #777;
+}
+
+
+
+/* -----------------------------------------
+   Back to Works
+   ----------------------------------------- */
+
+.works-year-navigation {
+    margin-bottom: 50px;
+}
+
+
+.works-year-navigation a {
+    color: #777;
+
+    font-size: 13px;
+
+    text-decoration: none;
+
+    transition: opacity 0.3s ease;
+}
+
+
+.works-year-navigation a:hover {
+    opacity: 0.5;
+}
+
+
+
+/* -----------------------------------------
+   Works Grid
+   ----------------------------------------- */
+
+.works-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    column-gap: 35px;
+    row-gap: 80px;
+
+}
+
+
+.work-card {
+
+    display: block;
+
+    color: inherit;
+
+    text-decoration: none;
+
+}
+
+
+.work-image {
+
+    overflow: hidden;
+
+    background: #f5f5f5;
+}
+
+
+.work-image img {
+
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    transition:
+        transform 0.6s ease,
+        opacity 0.5s ease;
+
+}
+
+
+.work-card:hover .work-image img {
+
+    transform: scale(1.03);
+
+    opacity: 0.9;
+
+}
+
+
+.work-info {
+
+    margin-top: 18px;
+
+}
+
+
+.work-info h2 {
+
+    margin: 0 0 6px;
+
+    font-size: 15px;
+
+    font-weight: 400;
+
+}
+
+
+.work-info p {
+
+    margin: 0;
+
+    font-size: 12px;
+
+    color: #777;
+
+}
+
+
+
+/* -----------------------------------------
+   Artwork Detail
+   ----------------------------------------- */
+
+.artwork-detail {
+
+    width: min(1200px, calc(100% - 80px));
+
+    margin: 0 auto;
+
+    padding: 130px 0 120px;
+
+}
+
+
+.artwork-back {
+
+    margin-bottom: 55px;
+
+}
+
+
+.artwork-back a {
+
+    color: #777;
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    transition: opacity 0.3s ease;
+
+}
+
+
+.artwork-back a:hover {
+
+    opacity: 0.5;
+
+}
+
+
+
+/* -----------------------------------------
+   Artwork Main Image
+   ----------------------------------------- */
+
+.artwork-main-image {
+
+    width: 100%;
+
+    margin-bottom: 70px;
+
+    text-align: center;
+
+}
+
+
+.artwork-main-image img {
+
+    display: block;
+
+    width: auto;
+
+    max-width: 100%;
+
+    max-height: 78vh;
+
+    margin: 0 auto;
+
+}
+
+
+
+/* -----------------------------------------
+   Artwork Information
+   ----------------------------------------- */
+
+.artwork-information {
+
+    display: grid;
+
+    grid-template-columns: 1.2fr 0.8fr;
+
+    column-gap: 80px;
+
+    padding-top: 35px;
+
+    border-top: 1px solid #ddd;
+
+}
+
+
+.artwork-title h1 {
+
+    margin: 0 0 10px;
+
+    font-size: 23px;
+
+    font-weight: 400;
+
+}
+
+
+.artwork-title p {
+
+    margin: 0;
+
+    font-size: 13px;
+
+    color: #777;
+
+}
+
+
+.artwork-meta {
+
+    font-size: 13px;
+
+    line-height: 1.8;
+
+    color: #777;
+
+}
+
+
+.artwork-meta p {
+
+    margin: 0;
+
+}
+
+
+.artwork-description {
+
+    grid-column: 1 / -1;
+
+    max-width: 700px;
+
+    margin-top: 50px;
+
+    font-size: 14px;
+
+    line-height: 2;
+
+}
+
+
+.artwork-description p {
+
+    margin: 0;
+
+}
+
+
+
+/* -----------------------------------------
+   Mobile
+   ----------------------------------------- */
+
+@media (max-width: 768px) {
+
+
+    .works-grid {
+
+        grid-template-columns: repeat(2, 1fr);
+
+        column-gap: 15px;
+
+        row-gap: 50px;
+
+    }
+
+
+    .work-info {
+
+        margin-top: 12px;
+
+    }
+
+
+    .work-info h2 {
+
+        font-size: 13px;
+
+    }
+
+
+    .artwork-detail {
+
+        width: calc(100% - 40px);
+
+        padding: 100px 0 80px;
+
+    }
+
+
+    .artwork-main-image {
+
+        margin-bottom: 50px;
+
+    }
+
+
+    .artwork-main-image img {
+
+        max-height: 65vh;
+
+    }
+
+
+    .artwork-information {
+
+        display: block;
+
+    }
+
+
+    .artwork-meta {
+
+        margin-top: 30px;
+
+    }
+
+
+    .artwork-description {
+
+        margin-top: 40px;
+
+    }
+
+}
