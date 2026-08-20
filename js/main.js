@@ -13,6 +13,10 @@ document.addEventListener(
            PAGE LOAD
         ========================================== */
 
+        document.body.classList.remove(
+            "page-exit"
+        );
+
         document.body.classList.add(
             "page-loaded"
         );
@@ -222,6 +226,28 @@ document.addEventListener(
             }
         );
 
+
+    }
+);
+
+
+
+/* =========================================
+   BROWSER BACK / FORWARD
+   RESTORE PAGE CORRECTLY
+========================================= */
+
+window.addEventListener(
+    "pageshow",
+    () => {
+
+        document.body.classList.remove(
+            "page-exit"
+        );
+
+        document.body.classList.add(
+            "page-loaded"
+        );
 
     }
 );
