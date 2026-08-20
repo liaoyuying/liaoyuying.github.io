@@ -1253,7 +1253,7 @@ img {
 
     overflow: hidden;
 
-    background: #f5f5f5;
+    background: var(--background);
 
     display: flex;
     align-items: center;
