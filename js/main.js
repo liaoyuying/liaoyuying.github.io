@@ -189,14 +189,13 @@ document.addEventListener(
 
                         }
 
-
                         if (
-                            targetURL.host !==
-                            currentHost
+                            targetURL.host !== currentHost ||
+                            targetURL.pathname === window.location.pathname
                         ) {
 
                             return;
-
+                            
                         }
 
 
