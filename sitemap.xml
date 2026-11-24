@@ -1,40 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
-    <url>
-        <loc>https://liaoyuying.github.io/</loc>
-    </url>
-
-    <url>
-        <loc>https://liaoyuying.github.io/about.html</loc>
-    </url>
-
-    <url>
-        <loc>https://liaoyuying.github.io/exhibitions.html</loc>
-    </url>
-
-    <url>
-        <loc>https://liaoyuying.github.io/works.html</loc>
-    </url>
-
-    <url>
-        <loc>https://liaoyuying.github.io/contact.html</loc>
-    </url>
-
-    <url>
-        <loc>https://liaoyuying.github.io/works/2026.html</loc>
-    </url>
-
-    <url>
-        <loc>https://liaoyuying.github.io/works/2025.html</loc>
-    </url>
-
-    <url>
-        <loc>https://liaoyuying.github.io/works/2024.html</loc>
-    </url>
-
-    <url>
-        <loc>https://liaoyuying.github.io/works/2023.html</loc>
-    </url>
-
+  <url>
+    <loc>https://liaoyuying.github.io/</loc>
+  </url>
 </urlset>
